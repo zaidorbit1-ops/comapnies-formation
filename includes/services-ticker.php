@@ -13,7 +13,7 @@ $tickerServices = [
   ['company-secretarial', 'Company Secretarial', 'folder_managed'],
   ['irish-registered-office', 'Irish Registered Office', 'location_on'],
 ];
-$tickerServicePrefix = ($siteRoot ?? '') === '../../' ? '' : 'services/';
+$tickerServicePrefix = rtrim($siteRoot ?? '/', '/') . '/services/';
 ?>
 <section class="services-ticker" aria-label="Explore our company services">
   <div class="services-ticker__inner">
@@ -34,7 +34,7 @@ $tickerServicePrefix = ($siteRoot ?? '') === '../../' ? '' : 'services/';
               <?php if ($isDuplicate): ?>
                 <span class="services-ticker__item">
               <?php else: ?>
-                <a class="services-ticker__item" href="<?= htmlspecialchars($tickerServicePrefix . $slug . '.php', ENT_QUOTES, 'UTF-8') ?>">
+                <a class="services-ticker__item" href="<?= htmlspecialchars($tickerServicePrefix . $slug, ENT_QUOTES, 'UTF-8') ?>">
               <?php endif; ?>
                 <span class="services-ticker__icon material-symbols-outlined" aria-hidden="true"><?= htmlspecialchars($icon, ENT_QUOTES, 'UTF-8') ?></span>
                 <span class="services-ticker__item-copy">

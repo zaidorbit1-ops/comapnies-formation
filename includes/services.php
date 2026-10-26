@@ -22,18 +22,18 @@ $serviceCategories = [
   ],
 ];
 $serviceRoutes = [
-  'irish-company-formation' => 'services/irish-company-formation.php',
-  'free-company-check' => 'services/free-company-check.php',
-  'irish-company-registration-from-abroad' => 'services/irish-company-registration-from-abroad.php',
-  'director-secretary-changes' => 'services/director-secretary-changes.php',
-  'shareholder-changes' => 'services/shareholder-changes.php',
-  'closing-up-a-company' => 'services/closing-up-a-company.php',
-  'beneficial-ownership-register' => 'services/beneficial-ownership-register.php',
-  'annual-return' => 'services/annual-return.php',
-  'audit-exemption-court-application' => 'services/audit-exemption-court-application.php',
-  'tax-vat-registration' => 'services/tax-vat-registration.php',
-  'company-secretarial' => 'services/company-secretarial.php',
-  'irish-registered-office' => 'services/irish-registered-office.php',
+  'irish-company-formation' => 'services/irish-company-formation',
+  'free-company-check' => 'services/free-company-check',
+  'irish-company-registration-from-abroad' => 'services/irish-company-registration-from-abroad',
+  'director-secretary-changes' => 'services/director-secretary-changes',
+  'shareholder-changes' => 'services/shareholder-changes',
+  'closing-up-a-company' => 'services/closing-up-a-company',
+  'beneficial-ownership-register' => 'services/beneficial-ownership-register',
+  'annual-return' => 'services/annual-return',
+  'audit-exemption-court-application' => 'services/audit-exemption-court-application',
+  'tax-vat-registration' => 'services/tax-vat-registration',
+  'company-secretarial' => 'services/company-secretarial',
+  'irish-registered-office' => 'services/irish-registered-office',
 ];
 ?>
 <section class="py-20 lg:py-28 bg-white border-b border-border-subtle" id="services">

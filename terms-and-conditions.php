@@ -1,12 +1,13 @@
 <?php
 declare(strict_types=1);
 
-$siteRoot = '';
+require_once __DIR__ . '/includes/site-root.php';
+$siteRoot = siteRootUrl();
 $activePage = '';
 $pageTitle = 'Terms and Conditions';
 $pageDescription = 'Conditions applying to the sale and transfer of companies and the provision of services by Companies Formation.';
 $breadcrumbs = [
-  ['label' => 'Home', 'url' => 'index.php'],
+  ['label' => 'Home', 'url' => './'],
   ['label' => 'Terms and Conditions'],
 ];
 $termsSections = [
@@ -138,8 +139,8 @@ $termsSections = [
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Sora:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <script src="assets/js/tailwind-config.js"></script>
-  <link rel="stylesheet" href="assets/css/theme.css?v=<?= filemtime(__DIR__ . '/assets/css/theme.css') ?>">
+  <script src="<?= htmlspecialchars($siteRoot, ENT_QUOTES, 'UTF-8') ?>assets/js/tailwind-config.js"></script>
+  <link rel="stylesheet" href="<?= htmlspecialchars($siteRoot, ENT_QUOTES, 'UTF-8') ?>assets/css/theme.css?v=<?= filemtime(__DIR__ . '/assets/css/theme.css') ?>">
 </head>
 <body class="bg-surface-canvas text-on-surface antialiased font-body-md">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -175,6 +176,6 @@ $termsSections = [
     </section>
   </main>
   <?php require __DIR__ . '/includes/footer.php'; ?>
-  <script src="assets/js/site.js?v=<?= filemtime(__DIR__ . '/assets/js/site.js') ?>" defer></script>
+  <script src="<?= htmlspecialchars($siteRoot, ENT_QUOTES, 'UTF-8') ?>assets/js/site.js?v=<?= filemtime(__DIR__ . '/assets/js/site.js') ?>" defer></script>
 </body>
 </html>

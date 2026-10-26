@@ -1,13 +1,14 @@
 <?php
 declare(strict_types=1);
 
-$siteRoot = '../../';
+require_once (dirname(__DIR__) . '/includes/site-root.php');
+$siteRoot = siteRootUrl();
 $activePage = 'services';
 $pageTitle = 'Audit Exemption Court Application';
 $pageDescription = 'The vast majority of companies do not need an audit. In rare cases if the returns for your company are late, an audit may be required.';
 $breadcrumbs = [
-  ['label' => 'Home', 'url' => '../../index.php'],
-  ['label' => 'Services', 'url' => '../../index.php#services'],
+  ['label' => 'Home', 'url' => $siteRoot],
+  ['label' => 'Services', 'url' => $siteRoot . '#services'],
   ['label' => 'Audit Exemption Court Application'],
 ];
 $contactCtaTitle = 'Speak to us about an audit exemption application';
@@ -29,8 +30,8 @@ $contactCtaLabel = 'Call us';
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Sora:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <script src="../../assets/js/tailwind-config.js"></script>
-  <link rel="stylesheet" href="../../assets/css/theme.css?v=<?= filemtime(dirname(__DIR__) . '/assets/css/theme.css') ?>">
+  <script src="<?= htmlspecialchars($siteRoot, ENT_QUOTES, 'UTF-8') ?>assets/js/tailwind-config.js"></script>
+  <link rel="stylesheet" href="<?= htmlspecialchars($siteRoot, ENT_QUOTES, 'UTF-8') ?>assets/css/theme.css?v=<?= filemtime(dirname(__DIR__) . '/assets/css/theme.css') ?>">
 </head>
 <body class="bg-surface-canvas text-on-surface antialiased font-body-md selection:bg-primary-container selection:text-white">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -147,6 +148,6 @@ $contactCtaLabel = 'Call us';
     <?php require dirname(__DIR__) . '/includes/cta.php'; ?>
   </main>
   <?php require dirname(__DIR__) . '/includes/footer.php'; ?>
-  <script src="../../assets/js/site.js?v=<?= filemtime(dirname(__DIR__) . '/assets/js/site.js') ?>" defer></script>
+  <script src="<?= htmlspecialchars($siteRoot, ENT_QUOTES, 'UTF-8') ?>assets/js/site.js?v=<?= filemtime(dirname(__DIR__) . '/assets/js/site.js') ?>" defer></script>
 </body>
 </html>

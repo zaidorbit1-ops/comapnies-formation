@@ -1,0 +1,18 @@
+Options -MultiViews -Indexes
+DirectoryIndex index.php
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_METHOD} ^(?:GET|HEAD)$
+RewriteCond %{THE_REQUEST} \s/+[^\s?]*index\.php(?:[?\s]) [NC]
+RewriteCond %{REQUEST_URI} ^(.*/)index\.php$
+RewriteRule ^index\.php$ %1 [R=301,L]
+
+RewriteCond %{REQUEST_METHOD} ^(?:GET|HEAD)$
+RewriteCond %{THE_REQUEST} \s/+[^\s?]*\.php(?:[?\s]) [NC]
+RewriteCond %{REQUEST_URI} ^(.*/)([^/]+)\.php$
+RewriteRule ^(.+)\.php$ %1%2 [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.+?)/?$ $1.php [L]

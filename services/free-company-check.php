@@ -1,13 +1,14 @@
 <?php
 declare(strict_types=1);
 
-$siteRoot = '../../';
+require_once (dirname(__DIR__) . '/includes/site-root.php');
+$siteRoot = siteRootUrl();
 $activePage = 'services';
 $pageTitle = 'Free Company Check';
 $pageDescription = 'We offer professional & hassle free company formation services to help you register your business in Ireland';
 $breadcrumbs = [
-  ['label' => 'Home', 'url' => '../../index.php'],
-  ['label' => 'Services', 'url' => '../../index.php#services'],
+  ['label' => 'Home', 'url' => $siteRoot],
+  ['label' => 'Services', 'url' => $siteRoot . '#services'],
   ['label' => 'Free Company Check'],
 ];
 $contactCtaTitle = 'WE WILL CHECK THE NAME FOR YOU FREE OF CHARGE !';
@@ -29,8 +30,8 @@ $contactCtaLabel = 'Email us';
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Sora:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <script src="../../assets/js/tailwind-config.js"></script>
-  <link rel="stylesheet" href="../../assets/css/theme.css?v=<?= filemtime(dirname(__DIR__) . '/assets/css/theme.css') ?>">
+  <script src="<?= htmlspecialchars($siteRoot, ENT_QUOTES, 'UTF-8') ?>assets/js/tailwind-config.js"></script>
+  <link rel="stylesheet" href="<?= htmlspecialchars($siteRoot, ENT_QUOTES, 'UTF-8') ?>assets/css/theme.css?v=<?= filemtime(dirname(__DIR__) . '/assets/css/theme.css') ?>">
 </head>
 <body class="bg-surface-canvas text-on-surface antialiased font-body-md selection:bg-primary-container selection:text-white">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -75,7 +76,7 @@ $contactCtaLabel = 'Email us';
             <h2 class="text-surface-contrast font-headline-lg text-headline-lg font-bold tracking-tight" id="free-check-form-title">Check a company name</h2>
             <p class="text-on-surface-variant font-body-md text-body-md">Enter your proposed company name to search the CRO register.</p>
           </div>
-          <form class="free-check-form__fields" id="company-name-check-form" action="company-name-check.php" method="post">
+          <form class="free-check-form__fields" id="company-name-check-form" action="company-name-check" method="post">
             <label for="company-name-input">Enter company name</label>
             <div class="free-check-form__control">
               <span class="material-symbols-outlined" aria-hidden="true">domain</span>
@@ -125,7 +126,7 @@ $contactCtaLabel = 'Email us';
     <?php require dirname(__DIR__) . '/includes/cta.php'; ?>
   </main>
   <?php require dirname(__DIR__) . '/includes/footer.php'; ?>
-  <script src="../../assets/js/site.js?v=<?= filemtime(dirname(__DIR__) . '/assets/js/site.js') ?>" defer></script>
-  <script src="../../assets/js/company-name-check.js?v=<?= filemtime(dirname(__DIR__) . '/assets/js/company-name-check.js') ?>" defer></script>
+  <script src="<?= htmlspecialchars($siteRoot, ENT_QUOTES, 'UTF-8') ?>assets/js/site.js?v=<?= filemtime(dirname(__DIR__) . '/assets/js/site.js') ?>" defer></script>
+  <script src="<?= htmlspecialchars($siteRoot, ENT_QUOTES, 'UTF-8') ?>assets/js/company-name-check.js?v=<?= filemtime(dirname(__DIR__) . '/assets/js/company-name-check.js') ?>" defer></script>
 </body>
 </html>

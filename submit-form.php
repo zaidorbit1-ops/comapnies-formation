@@ -107,9 +107,9 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 
 $formType = $_POST['form_type'] ?? '';
 $routes = [
-  'contact' => ['contact.php', 'contact-form'],
-  'annual_return' => ['services/annual-return.php', 'annual-return-enquiry'],
-  'rbo' => ['services/beneficial-ownership-register.php', 'rbo-registration-form'],
+  'contact' => ['contact', 'contact-form'],
+  'annual_return' => ['services/annual-return', 'annual-return-enquiry'],
+  'rbo' => ['services/beneficial-ownership-register', 'rbo-registration-form'],
 ];
 if (!is_string($formType) || !isset($routes[$formType])) {
   http_response_code(400);

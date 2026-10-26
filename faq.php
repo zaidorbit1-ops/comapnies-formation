@@ -1,12 +1,13 @@
 <?php
 declare(strict_types=1);
 
-$siteRoot = '';
+require_once __DIR__ . '/includes/site-root.php';
+$siteRoot = siteRootUrl();
 $activePage = 'faq';
 $pageTitle = 'Frequently Asked Questions';
 $pageDescription = 'Answers to common questions about forming, registering and running a company in Ireland.';
 $breadcrumbs = [
-  ['label' => 'Home', 'url' => 'index.php'],
+  ['label' => 'Home', 'url' => './'],
   ['label' => 'Frequently Asked Questions'],
 ];
 $faqGroupIcons = [
@@ -22,7 +23,7 @@ $faqGroups = [
     ],
     [
       'question' => 'Does the trading address need to be the same as the registered address?',
-      'answer' => 'No. A company’s registered office must be a physical address in Ireland where official notices can be delivered. Its trading or business address can be different. The registered office is part of the company’s public record, so consider this before using a home address. See our <a href="services/irish-registered-office.php">Irish Registered Office service</a> for an alternative.',
+      'answer' => 'No. A company’s registered office must be a physical address in Ireland where official notices can be delivered. Its trading or business address can be different. The registered office is part of the company’s public record, so consider this before using a home address. See our <a href="services/irish-registered-office">Irish Registered Office service</a> for an alternative.',
     ],
     [
       'question' => 'What is the difference between a limited company and a trading name?',
@@ -62,7 +63,7 @@ $faqGroups = [
     ],
     [
       'question' => 'Can I change directors, secretary or shareholders?',
-      'answer' => 'Yes, subject to the company’s constitution and applicable company law. Director and secretary changes must be recorded in the company’s statutory records and the relevant CRO notice filed within the required time. A share transfer also needs to be properly documented and the company’s register of members updated; stamp duty or other requirements may apply depending on the transfer. We offer support with <a href="services/director-secretary-changes.php">director or secretary changes</a> and <a href="services/shareholder-changes.php">shareholder changes</a>.',
+      'answer' => 'Yes, subject to the company’s constitution and applicable company law. Director and secretary changes must be recorded in the company’s statutory records and the relevant CRO notice filed within the required time. A share transfer also needs to be properly documented and the company’s register of members updated; stamp duty or other requirements may apply depending on the transfer. We offer support with <a href="services/director-secretary-changes">director or secretary changes</a> and <a href="services/shareholder-changes">shareholder changes</a>.',
     ],
     [
       'question' => 'What needs to be filed for my company once it is formed?',
@@ -74,7 +75,7 @@ $faqGroups = [
     ],
     [
       'question' => 'Can I close my company down?',
-      'answer' => 'Possibly. A solvent company that meets the statutory conditions may be eligible for voluntary strike-off, which requires the company to stop trading, settle its affairs and meet CRO and Revenue requirements. A company with outstanding debts or other complications may need a different process, such as liquidation. Start by checking the company’s filings, assets, liabilities and tax position. We can explain our <a href="services/closing-up-a-company.php">company closure service</a> and the steps involved.',
+      'answer' => 'Possibly. A solvent company that meets the statutory conditions may be eligible for voluntary strike-off, which requires the company to stop trading, settle its affairs and meet CRO and Revenue requirements. A company with outstanding debts or other complications may need a different process, such as liquidation. Start by checking the company’s filings, assets, liabilities and tax position. We can explain our <a href="services/closing-up-a-company">company closure service</a> and the steps involved.',
     ],
   ],
 ];
@@ -93,8 +94,8 @@ $faqGroups = [
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Sora:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <script src="assets/js/tailwind-config.js"></script>
-  <link rel="stylesheet" href="assets/css/theme.css?v=<?= filemtime(__DIR__ . '/assets/css/theme.css') ?>">
+  <script src="<?= htmlspecialchars($siteRoot, ENT_QUOTES, 'UTF-8') ?>assets/js/tailwind-config.js"></script>
+  <link rel="stylesheet" href="<?= htmlspecialchars($siteRoot, ENT_QUOTES, 'UTF-8') ?>assets/css/theme.css?v=<?= filemtime(__DIR__ . '/assets/css/theme.css') ?>">
 </head>
 <body class="bg-surface-canvas text-on-surface antialiased font-body-md selection:bg-primary-container selection:text-white">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -149,6 +150,6 @@ $faqGroups = [
     </section>
   </main>
   <?php require __DIR__ . '/includes/footer.php'; ?>
-  <script src="assets/js/site.js?v=<?= filemtime(__DIR__ . '/assets/js/site.js') ?>" defer></script>
+  <script src="<?= htmlspecialchars($siteRoot, ENT_QUOTES, 'UTF-8') ?>assets/js/site.js?v=<?= filemtime(__DIR__ . '/assets/js/site.js') ?>" defer></script>
 </body>
 </html>

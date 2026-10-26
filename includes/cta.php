@@ -1,7 +1,7 @@
 <?php
 $contactCtaTitle = $contactCtaTitle ?? 'Let’s make your next move in Ireland.';
 $contactCtaDescription = $contactCtaDescription ?? 'Talk to our team for clear, practical support with your company formation and ongoing company needs.';
-$contactCtaHref = $contactCtaHref ?? (($siteRoot ?? '') . 'contact.php');
+$contactCtaHref = $contactCtaHref ?? (($siteRoot ?? '') . 'contact');
 $contactCtaLabel = $contactCtaLabel ?? 'Get in touch';
 ?>
 <section class="contact-cta" id="contact-cta" aria-labelledby="contact-cta-title">

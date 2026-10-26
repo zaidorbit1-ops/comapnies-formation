@@ -1,13 +1,14 @@
 <?php
 declare(strict_types=1);
 
-$siteRoot = '../../';
+require_once (dirname(__DIR__) . '/includes/site-root.php');
+$siteRoot = siteRootUrl();
 $activePage = 'services';
 $pageTitle = 'Irish Company Formation';
 $pageDescription = 'Professional, hassle-free company formation services to help you register your business in Ireland.';
 $breadcrumbs = [
-  ['label' => 'Home', 'url' => '../../index.php'],
-  ['label' => 'Services', 'url' => '../../index.php#services'],
+  ['label' => 'Home', 'url' => $siteRoot],
+  ['label' => 'Services', 'url' => $siteRoot . '#services'],
   ['label' => 'Irish Company Formation'],
 ];
 ?>
@@ -25,8 +26,8 @@ $breadcrumbs = [
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Sora:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <script src="../../assets/js/tailwind-config.js"></script>
-  <link rel="stylesheet" href="../../assets/css/theme.css?v=<?= filemtime(dirname(__DIR__) . '/assets/css/theme.css') ?>">
+  <script src="<?= htmlspecialchars($siteRoot, ENT_QUOTES, 'UTF-8') ?>assets/js/tailwind-config.js"></script>
+  <link rel="stylesheet" href="<?= htmlspecialchars($siteRoot, ENT_QUOTES, 'UTF-8') ?>assets/css/theme.css?v=<?= filemtime(dirname(__DIR__) . '/assets/css/theme.css') ?>">
 </head>
 <body class="bg-surface-canvas text-on-surface antialiased font-body-md selection:bg-primary-container selection:text-white">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -47,7 +48,7 @@ $breadcrumbs = [
               <span class="formation-intro__price-value">€135 <small>+ VAT</small></span>
               <span class="formation-intro__price-note">€166.05 including VAT</span>
             </div>
-            <a class="theme-button theme-button-primary formation-intro__button" href="../../index.php#packages">
+            <a class="theme-button theme-button-primary formation-intro__button" href="<?= htmlspecialchars($siteRoot, ENT_QUOTES, 'UTF-8') ?>#packages">
               View formation packages <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
             </a>
           </div>
@@ -95,7 +96,7 @@ $breadcrumbs = [
             <span class="theme-eyebrow">Complete company formation pack</span>
             <h2 class="text-surface-contrast font-headline-lg text-headline-lg font-bold tracking-tight" id="formation-pack-title">Expert support, with a clear price.</h2>
             <p class="text-on-surface-variant font-body-lg text-body-lg">Our complete company formation pack is €135 plus VAT (€166.05 including VAT). It includes our price promise and support from our team, who you can call, email or meet at our Maynooth office.</p>
-            <a class="theme-button theme-button-primary formation-intro__button" href="../../index.php#packages">
+            <a class="theme-button theme-button-primary formation-intro__button" href="<?= htmlspecialchars($siteRoot, ENT_QUOTES, 'UTF-8') ?>#packages">
               Compare formation packages <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
             </a>
           </div>
@@ -114,6 +115,6 @@ $breadcrumbs = [
     <?php require dirname(__DIR__) . '/includes/cta.php'; ?>
   </main>
   <?php require dirname(__DIR__) . '/includes/footer.php'; ?>
-  <script src="../../assets/js/site.js?v=<?= filemtime(dirname(__DIR__) . '/assets/js/site.js') ?>" defer></script>
+  <script src="<?= htmlspecialchars($siteRoot, ENT_QUOTES, 'UTF-8') ?>assets/js/site.js?v=<?= filemtime(dirname(__DIR__) . '/assets/js/site.js') ?>" defer></script>
 </body>
 </html>

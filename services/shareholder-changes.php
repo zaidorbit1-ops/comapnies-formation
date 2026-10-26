@@ -1,13 +1,14 @@
 <?php
 declare(strict_types=1);
 
-$siteRoot = '../../';
+require_once (dirname(__DIR__) . '/includes/site-root.php');
+$siteRoot = siteRootUrl();
 $activePage = 'services';
 $pageTitle = 'Changes in Shareholders';
 $pageDescription = 'A company must register a transfer of shares to ensure the company’s books and records are correct and to protect shareholder rights.';
 $breadcrumbs = [
-  ['label' => 'Home', 'url' => '../../index.php'],
-  ['label' => 'Services', 'url' => '../../index.php#services'],
+  ['label' => 'Home', 'url' => $siteRoot],
+  ['label' => 'Services', 'url' => $siteRoot . '#services'],
   ['label' => 'Changes in Shareholders'],
 ];
 $contactCtaTitle = 'Let us guide you through your share transfer';
@@ -29,8 +30,8 @@ $contactCtaLabel = 'Call us';
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Sora:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <script src="../../assets/js/tailwind-config.js"></script>
-  <link rel="stylesheet" href="../../assets/css/theme.css?v=<?= filemtime(dirname(__DIR__) . '/assets/css/theme.css') ?>">
+  <script src="<?= htmlspecialchars($siteRoot, ENT_QUOTES, 'UTF-8') ?>assets/js/tailwind-config.js"></script>
+  <link rel="stylesheet" href="<?= htmlspecialchars($siteRoot, ENT_QUOTES, 'UTF-8') ?>assets/css/theme.css?v=<?= filemtime(dirname(__DIR__) . '/assets/css/theme.css') ?>">
 </head>
 <body class="bg-surface-canvas text-on-surface antialiased font-body-md selection:bg-primary-container selection:text-white">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -50,7 +51,7 @@ $contactCtaLabel = 'Call us';
             <div class="shareholder-changes-intro__price abroad-intro__price">
               <span>€150.00 <small>+ VAT</small></span>
               <span class="shareholder-changes-intro__total">€184.50 total</span>
-              <a class="theme-button theme-button-primary" href="../../index.php#packages">
+              <a class="theme-button theme-button-primary" href="<?= htmlspecialchars($siteRoot, ENT_QUOTES, 'UTF-8') ?>#packages">
                 View Packages <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
               </a>
             </div>
@@ -95,6 +96,6 @@ $contactCtaLabel = 'Call us';
     <?php require dirname(__DIR__) . '/includes/cta.php'; ?>
   </main>
   <?php require dirname(__DIR__) . '/includes/footer.php'; ?>
-  <script src="../../assets/js/site.js?v=<?= filemtime(dirname(__DIR__) . '/assets/js/site.js') ?>" defer></script>
+  <script src="<?= htmlspecialchars($siteRoot, ENT_QUOTES, 'UTF-8') ?>assets/js/site.js?v=<?= filemtime(dirname(__DIR__) . '/assets/js/site.js') ?>" defer></script>
 </body>
 </html>

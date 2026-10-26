@@ -4,12 +4,13 @@ declare(strict_types=1);
 require_once __DIR__ . '/includes/form-security.php';
 $contactCsrfToken = formCsrfToken();
 
-$siteRoot = '';
+require_once __DIR__ . '/includes/site-root.php';
+$siteRoot = siteRootUrl();
 $activePage = 'contact';
 $pageTitle = 'Contact Us';
 $pageDescription = 'Get in touch with Companies Formation for practical support with company formation and ongoing company services in Ireland.';
 $breadcrumbs = [
-  ['label' => 'Home', 'url' => 'index.php'],
+  ['label' => 'Home', 'url' => './'],
   ['label' => 'Contact'],
 ];
 $contactMethods = [
@@ -53,8 +54,8 @@ $contactPackages = [
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Sora:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <script src="assets/js/tailwind-config.js"></script>
-  <link rel="stylesheet" href="assets/css/theme.css?v=<?= filemtime(__DIR__ . '/assets/css/theme.css') ?>">
+  <script src="<?= htmlspecialchars($siteRoot, ENT_QUOTES, 'UTF-8') ?>assets/js/tailwind-config.js"></script>
+  <link rel="stylesheet" href="<?= htmlspecialchars($siteRoot, ENT_QUOTES, 'UTF-8') ?>assets/css/theme.css?v=<?= filemtime(__DIR__ . '/assets/css/theme.css') ?>">
 </head>
 <body class="bg-surface-canvas text-on-surface antialiased font-body-md selection:bg-primary-container selection:text-white">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -79,7 +80,7 @@ $contactPackages = [
               <p>Share your details and choose the package you would like to discuss.</p>
             </div>
             <?= formStatusMarkup() ?>
-            <form class="contact-page__form" id="contact-form" action="submit-form.php" method="post" autocomplete="on" data-ajax-form novalidate>
+            <form class="contact-page__form" id="contact-form" action="submit-form" method="post" autocomplete="on" data-ajax-form novalidate>
               <input type="hidden" name="form_type" value="contact">
               <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($contactCsrfToken, ENT_QUOTES, 'UTF-8') ?>">
               <div class="form-honeypot" aria-hidden="true">
@@ -166,7 +167,7 @@ $contactPackages = [
     </section>
   </main>
   <?php require __DIR__ . '/includes/footer.php'; ?>
-  <script src="assets/js/site.js?v=<?= filemtime(__DIR__ . '/assets/js/site.js') ?>" defer></script>
-  <script src="assets/js/form-submission.js?v=<?= filemtime(__DIR__ . '/assets/js/form-submission.js') ?>" defer></script>
+  <script src="<?= htmlspecialchars($siteRoot, ENT_QUOTES, 'UTF-8') ?>assets/js/site.js?v=<?= filemtime(__DIR__ . '/assets/js/site.js') ?>" defer></script>
+  <script src="<?= htmlspecialchars($siteRoot, ENT_QUOTES, 'UTF-8') ?>assets/js/form-submission.js?v=<?= filemtime(__DIR__ . '/assets/js/form-submission.js') ?>" defer></script>
 </body>
 </html>

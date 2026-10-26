@@ -1,13 +1,14 @@
 <?php
 declare(strict_types=1);
 
-$siteRoot = '../../';
+require_once (dirname(__DIR__) . '/includes/site-root.php');
+$siteRoot = siteRootUrl();
 $activePage = 'services';
 $pageTitle = 'Company Secretarial';
 $pageDescription = 'We can update your company to be compliant with the new 2014 Companies Legislation. There is now no need for a second Director.';
 $breadcrumbs = [
-  ['label' => 'Home', 'url' => '../../index.php'],
-  ['label' => 'Services', 'url' => '../../index.php#services'],
+  ['label' => 'Home', 'url' => $siteRoot],
+  ['label' => 'Services', 'url' => $siteRoot . '#services'],
   ['label' => 'Company Secretarial'],
 ];
 $contactCtaTitle = 'Talk to our Company Secretarial Experts';
@@ -46,8 +47,8 @@ $secretarialFilings = [
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Sora:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <script src="../../assets/js/tailwind-config.js"></script>
-  <link rel="stylesheet" href="../../assets/css/theme.css?v=<?= filemtime(dirname(__DIR__) . '/assets/css/theme.css') ?>">
+  <script src="<?= htmlspecialchars($siteRoot, ENT_QUOTES, 'UTF-8') ?>assets/js/tailwind-config.js"></script>
+  <link rel="stylesheet" href="<?= htmlspecialchars($siteRoot, ENT_QUOTES, 'UTF-8') ?>assets/css/theme.css?v=<?= filemtime(dirname(__DIR__) . '/assets/css/theme.css') ?>">
 </head>
 <body class="bg-surface-canvas text-on-surface antialiased font-body-md selection:bg-primary-container selection:text-white">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -66,7 +67,7 @@ $secretarialFilings = [
             <p class="text-on-surface-variant font-body-lg text-body-lg">We can update your company to be compliant with the new 2014 Companies Legislation. There is now no need for a second Director.</p>
             <div class="company-secretarial-intro__price abroad-intro__price">
               <span>€245.00</span>
-              <a class="theme-button theme-button-primary" href="../contact.php">
+              <a class="theme-button theme-button-primary" href="../contact">
                 Contact us <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
               </a>
             </div>
@@ -98,7 +99,7 @@ $secretarialFilings = [
             <span class="services-section__accent" aria-hidden="true"></span>
             <h2 class="text-surface-contrast font-headline-lg text-headline-lg font-bold tracking-tight" id="company-secretarial-transition-title">Changing your company to be a one director company.</h2>
             <p class="text-on-surface-variant font-body-lg text-body-lg">We can update your company to be compliant with the new 2014 Companies Legislation. There is now no need for a second Director or Shareholder and every current company has to changeover to be a new DAC or LTD company. We can arrange this for you providing the new constitution, resolutions and documentation for you. Just call us today or complete our simple order form here.</p>
-            <a class="company-secretarial-contact" href="../contact.php">
+            <a class="company-secretarial-contact" href="../contact">
               <span class="material-symbols-outlined" aria-hidden="true">contact_support</span>
               Contact us about your company
             </a>
@@ -131,6 +132,6 @@ $secretarialFilings = [
     <?php require dirname(__DIR__) . '/includes/cta.php'; ?>
   </main>
   <?php require dirname(__DIR__) . '/includes/footer.php'; ?>
-  <script src="../../assets/js/site.js?v=<?= filemtime(dirname(__DIR__) . '/assets/js/site.js') ?>" defer></script>
+  <script src="<?= htmlspecialchars($siteRoot, ENT_QUOTES, 'UTF-8') ?>assets/js/site.js?v=<?= filemtime(dirname(__DIR__) . '/assets/js/site.js') ?>" defer></script>
 </body>
 </html>

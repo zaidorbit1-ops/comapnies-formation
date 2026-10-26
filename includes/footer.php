@@ -1,7 +1,7 @@
 <footer class="site-footer">
   <div class="site-footer__main max-w-7xl mx-auto px-6 lg:px-12">
     <div class="site-footer__brand">
-      <a class="site-footer__logo" href="<?= htmlspecialchars($siteRoot ?? '', ENT_QUOTES, 'UTF-8') ?>index.php" aria-label="Companies Formation home">
+      <a class="site-footer__logo" href="<?= htmlspecialchars($siteRoot ?? '', ENT_QUOTES, 'UTF-8') ?>./" aria-label="Companies Formation home">
         <img alt="Companies Formation" src="<?= htmlspecialchars($siteRoot ?? '', ENT_QUOTES, 'UTF-8') ?>assets/images/logo.png">
       </a>
       <p class="site-footer__description">
@@ -26,37 +26,37 @@
     <div class="site-footer__column">
       <h2>Formation &amp; Changes</h2>
       <ul>
-        <li><a href="<?= htmlspecialchars($siteRoot ?? '', ENT_QUOTES, 'UTF-8') ?>index.php#service-irish-company-formation">Irish Company Formation</a></li>
-        <li><a href="<?= htmlspecialchars($siteRoot ?? '', ENT_QUOTES, 'UTF-8') ?>services/free-company-check.php">Free Company Check</a></li>
-        <li><a href="<?= htmlspecialchars($siteRoot ?? '', ENT_QUOTES, 'UTF-8') ?>services/irish-company-registration-from-abroad.php">Registration From Abroad</a></li>
-        <li><a href="<?= htmlspecialchars($siteRoot ?? '', ENT_QUOTES, 'UTF-8') ?>services/director-secretary-changes.php">Director or Secretary Changes</a></li>
-        <li><a href="<?= htmlspecialchars($siteRoot ?? '', ENT_QUOTES, 'UTF-8') ?>services/shareholder-changes.php">Shareholder Changes</a></li>
-        <li><a href="<?= htmlspecialchars($siteRoot ?? '', ENT_QUOTES, 'UTF-8') ?>services/closing-up-a-company.php">Closing Up A Company</a></li>
+        <li><a href="<?= htmlspecialchars($siteRoot ?? '', ENT_QUOTES, 'UTF-8') ?>./#service-irish-company-formation">Irish Company Formation</a></li>
+        <li><a href="<?= htmlspecialchars($siteRoot ?? '', ENT_QUOTES, 'UTF-8') ?>services/free-company-check">Free Company Check</a></li>
+        <li><a href="<?= htmlspecialchars($siteRoot ?? '', ENT_QUOTES, 'UTF-8') ?>services/irish-company-registration-from-abroad">Registration From Abroad</a></li>
+        <li><a href="<?= htmlspecialchars($siteRoot ?? '', ENT_QUOTES, 'UTF-8') ?>services/director-secretary-changes">Director or Secretary Changes</a></li>
+        <li><a href="<?= htmlspecialchars($siteRoot ?? '', ENT_QUOTES, 'UTF-8') ?>services/shareholder-changes">Shareholder Changes</a></li>
+        <li><a href="<?= htmlspecialchars($siteRoot ?? '', ENT_QUOTES, 'UTF-8') ?>services/closing-up-a-company">Closing Up A Company</a></li>
       </ul>
     </div>
 
     <div class="site-footer__column">
       <h2>Compliance &amp; Secretarial</h2>
       <ul>
-        <li><a href="<?= htmlspecialchars($siteRoot ?? '', ENT_QUOTES, 'UTF-8') ?>services/beneficial-ownership-register.php">Beneficial Ownership Register</a></li>
-        <li><a href="<?= htmlspecialchars($siteRoot ?? '', ENT_QUOTES, 'UTF-8') ?>services/annual-return.php">Annual Return</a></li>
-        <li><a href="<?= htmlspecialchars($siteRoot ?? '', ENT_QUOTES, 'UTF-8') ?>services/audit-exemption-court-application.php">Audit Exemption Court Application</a></li>
-        <li><a href="<?= htmlspecialchars($siteRoot ?? '', ENT_QUOTES, 'UTF-8') ?>services/tax-vat-registration.php">Tax/VAT Registration</a></li>
-        <li><a href="<?= htmlspecialchars($siteRoot ?? '', ENT_QUOTES, 'UTF-8') ?>services/company-secretarial.php">Company Secretarial</a></li>
-        <li><a href="<?= htmlspecialchars($siteRoot ?? '', ENT_QUOTES, 'UTF-8') ?>services/irish-registered-office.php">Irish Registered Office</a></li>
+        <li><a href="<?= htmlspecialchars($siteRoot ?? '', ENT_QUOTES, 'UTF-8') ?>services/beneficial-ownership-register">Beneficial Ownership Register</a></li>
+        <li><a href="<?= htmlspecialchars($siteRoot ?? '', ENT_QUOTES, 'UTF-8') ?>services/annual-return">Annual Return</a></li>
+        <li><a href="<?= htmlspecialchars($siteRoot ?? '', ENT_QUOTES, 'UTF-8') ?>services/audit-exemption-court-application">Audit Exemption Court Application</a></li>
+        <li><a href="<?= htmlspecialchars($siteRoot ?? '', ENT_QUOTES, 'UTF-8') ?>services/tax-vat-registration">Tax/VAT Registration</a></li>
+        <li><a href="<?= htmlspecialchars($siteRoot ?? '', ENT_QUOTES, 'UTF-8') ?>services/company-secretarial">Company Secretarial</a></li>
+        <li><a href="<?= htmlspecialchars($siteRoot ?? '', ENT_QUOTES, 'UTF-8') ?>services/irish-registered-office">Irish Registered Office</a></li>
       </ul>
     </div>
 
     <div class="site-footer__column site-footer__quick-links">
       <h2>Explore</h2>
       <ul>
-        <li><a href="<?= htmlspecialchars($siteRoot ?? '', ENT_QUOTES, 'UTF-8') ?>index.php">Home</a></li>
-        <li><a href="<?= htmlspecialchars($siteRoot ?? '', ENT_QUOTES, 'UTF-8') ?>about.php">About us</a></li>
-        <li><a href="<?= htmlspecialchars($siteRoot ?? '', ENT_QUOTES, 'UTF-8') ?>index.php#services">All services</a></li>
-        <li><a href="<?= htmlspecialchars($siteRoot ?? '', ENT_QUOTES, 'UTF-8') ?>packages.php">Packages</a></li>
-        <li><a href="<?= htmlspecialchars($siteRoot ?? '', ENT_QUOTES, 'UTF-8') ?>faq.php">Frequently asked questions</a></li>
-        <li><a href="<?= htmlspecialchars($siteRoot ?? '', ENT_QUOTES, 'UTF-8') ?>downloads.php">Downloads</a></li>
-        <li><a href="<?= htmlspecialchars($siteRoot ?? '', ENT_QUOTES, 'UTF-8') ?>contact.php">Contact us</a></li>
+        <li><a href="<?= htmlspecialchars($siteRoot ?? '', ENT_QUOTES, 'UTF-8') ?>./">Home</a></li>
+        <li><a href="<?= htmlspecialchars($siteRoot ?? '', ENT_QUOTES, 'UTF-8') ?>about">About us</a></li>
+        <li><a href="<?= htmlspecialchars($siteRoot ?? '', ENT_QUOTES, 'UTF-8') ?>./#services">All services</a></li>
+        <li><a href="<?= htmlspecialchars($siteRoot ?? '', ENT_QUOTES, 'UTF-8') ?>packages">Packages</a></li>
+        <li><a href="<?= htmlspecialchars($siteRoot ?? '', ENT_QUOTES, 'UTF-8') ?>faq">Frequently asked questions</a></li>
+        <li><a href="<?= htmlspecialchars($siteRoot ?? '', ENT_QUOTES, 'UTF-8') ?>downloads">Downloads</a></li>
+        <li><a href="<?= htmlspecialchars($siteRoot ?? '', ENT_QUOTES, 'UTF-8') ?>contact">Contact us</a></li>
       </ul>
     </div>
   </div>
@@ -65,8 +65,8 @@
     <div class="max-w-7xl mx-auto px-6 lg:px-12 site-footer__bottom-inner">
       <p>Copyright © 2026 Companiesformation.ie. All rights reserved.</p>
       <nav aria-label="Legal links">
-        <a href="<?= htmlspecialchars($siteRoot ?? '', ENT_QUOTES, 'UTF-8') ?>privacy-policy.php">Privacy Policy</a>
-        <a href="<?= htmlspecialchars($siteRoot ?? '', ENT_QUOTES, 'UTF-8') ?>terms-and-conditions.php">Terms and Conditions</a>
+        <a href="<?= htmlspecialchars($siteRoot ?? '', ENT_QUOTES, 'UTF-8') ?>privacy-policy">Privacy Policy</a>
+        <a href="<?= htmlspecialchars($siteRoot ?? '', ENT_QUOTES, 'UTF-8') ?>terms-and-conditions">Terms and Conditions</a>
       </nav>
     </div>
   </div>

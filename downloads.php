@@ -1,12 +1,13 @@
 <?php
 declare(strict_types=1);
 
-$siteRoot = '';
+require_once __DIR__ . '/includes/site-root.php';
+$siteRoot = siteRootUrl();
 $activePage = 'downloads';
 $pageTitle = 'Downloads';
 $pageDescription = 'Access useful company formation and registration forms for your business in Ireland.';
 $breadcrumbs = [
-  ['label' => 'Home', 'url' => 'index.php'],
+  ['label' => 'Home', 'url' => './'],
   ['label' => 'Downloads'],
 ];
 $downloadForms = [
@@ -15,7 +16,7 @@ $downloadForms = [
     'category' => 'Personal Public Service Number',
     'title' => 'PPS Application Form',
     'description' => 'Download the application form for a Personal Public Service Number.',
-    'file' => 'assets/Pdfs/PPS%20Application%20Form.pdf',
+    'file' => $siteRoot . 'assets/Pdfs/PPS%20Application%20Form.pdf',
     'filename' => 'PPS Application Form.pdf',
   ],
   [
@@ -23,7 +24,7 @@ $downloadForms = [
     'category' => 'Company formation',
     'title' => 'Agent Link Notification Form',
     'description' => 'Download the Agent Link Notification Form for company-related agent notifications.',
-    'file' => 'assets/Pdfs/Agent-link-notification-form.pdf',
+    'file' => $siteRoot . 'assets/Pdfs/Agent-link-notification-form.pdf',
     'filename' => 'Agent-link-notification-form.pdf',
   ],
   [
@@ -31,7 +32,7 @@ $downloadForms = [
     'category' => 'CRO incorporation',
     'title' => 'Application to Incorporate a Company',
     'description' => 'Application to incorporate a company under Section 22(2)/24 of the Companies Act 2014.',
-    'file' => 'assets/Pdfs/A1-v2.5-black-fillable.pdf',
+    'file' => $siteRoot . 'assets/Pdfs/A1-v2.5-black-fillable.pdf',
     'filename' => 'A1-v2.5-black-fillable.pdf',
   ],
 ];
@@ -50,8 +51,8 @@ $downloadForms = [
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Sora:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <script src="assets/js/tailwind-config.js"></script>
-  <link rel="stylesheet" href="assets/css/theme.css?v=<?= filemtime(__DIR__ . '/assets/css/theme.css') ?>">
+  <script src="<?= htmlspecialchars($siteRoot, ENT_QUOTES, 'UTF-8') ?>assets/js/tailwind-config.js"></script>
+  <link rel="stylesheet" href="<?= htmlspecialchars($siteRoot, ENT_QUOTES, 'UTF-8') ?>assets/css/theme.css?v=<?= filemtime(__DIR__ . '/assets/css/theme.css') ?>">
 </head>
 <body class="bg-surface-canvas text-on-surface antialiased font-body-md selection:bg-primary-container selection:text-white">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -99,6 +100,6 @@ $downloadForms = [
     </section>
   </main>
   <?php require __DIR__ . '/includes/footer.php'; ?>
-  <script src="assets/js/site.js?v=<?= filemtime(__DIR__ . '/assets/js/site.js') ?>" defer></script>
+  <script src="<?= htmlspecialchars($siteRoot, ENT_QUOTES, 'UTF-8') ?>assets/js/site.js?v=<?= filemtime(__DIR__ . '/assets/js/site.js') ?>" defer></script>
 </body>
 </html>

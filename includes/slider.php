@@ -50,4 +50,4 @@
     </div>
   </div>
 </section>
-<script src="assets/js/slider.js?v=<?= filemtime(__DIR__ . '/../assets/js/slider.js') ?>" defer></script>
+<script src="<?= htmlspecialchars($siteRoot, ENT_QUOTES, 'UTF-8') ?>assets/js/slider.js?v=<?= filemtime(__DIR__ . '/../assets/js/slider.js') ?>" defer></script>
