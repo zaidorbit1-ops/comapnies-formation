@@ -39,6 +39,7 @@ $secretarialFilings = [
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Company secretarial support and company filings from Companies Formation in Ireland.">
   <meta name="theme-color" content="#ffffff">
+  <?php require dirname(__DIR__) . '/includes/favicon.php'; ?>
   <title>Company Secretarial | Companies Formation</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -53,6 +54,7 @@ $secretarialFilings = [
   <?php require dirname(__DIR__) . '/includes/header.php'; ?>
   <main id="main">
     <?php require dirname(__DIR__) . '/includes/breadcrumb.php'; ?>
+    <?php require dirname(__DIR__) . '/includes/services-ticker.php'; ?>
 
     <section class="company-secretarial-intro abroad-intro py-16 lg:py-24 border-b border-border-subtle" aria-labelledby="company-secretarial-intro-title">
       <div class="max-w-7xl mx-auto px-6 lg:px-12">
@@ -71,7 +73,7 @@ $secretarialFilings = [
           </div>
           <div class="abroad-intro__visual">
             <?php
-            $assetImageName = 'company-secretarial-hero.jpg';
+            $assetImageName = 'service11.png';
             $assetImageAlt = 'Company Secretarial service';
             $assetImageWidth = 1200;
             $assetImageHeight = 880;

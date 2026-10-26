@@ -22,6 +22,7 @@ $contactCtaLabel = 'Call us';
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Support with an Audit Exemption Court Application for Irish companies.">
   <meta name="theme-color" content="#ffffff">
+  <?php require dirname(__DIR__) . '/includes/favicon.php'; ?>
   <title>Audit Exemption Court Application | Companies Formation</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,6 +37,7 @@ $contactCtaLabel = 'Call us';
   <?php require dirname(__DIR__) . '/includes/header.php'; ?>
   <main id="main">
     <?php require dirname(__DIR__) . '/includes/breadcrumb.php'; ?>
+    <?php require dirname(__DIR__) . '/includes/services-ticker.php'; ?>
 
     <section class="audit-exemption-intro abroad-intro py-16 lg:py-24 border-b border-border-subtle" aria-labelledby="audit-exemption-intro-title">
       <div class="max-w-7xl mx-auto px-6 lg:px-12">
@@ -54,7 +56,7 @@ $contactCtaLabel = 'Call us';
           </div>
           <div class="abroad-intro__visual">
             <?php
-            $assetImageName = 'audit-exemption-court-application-hero.jpg';
+            $assetImageName = 'service9.png';
             $assetImageAlt = 'Audit Exemption Court Application service';
             $assetImageWidth = 1200;
             $assetImageHeight = 880;

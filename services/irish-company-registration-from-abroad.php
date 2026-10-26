@@ -22,6 +22,7 @@ $contactCtaLabel = 'Email us';
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Register your Irish company from abroad with support from Companies Formation.">
   <meta name="theme-color" content="#ffffff">
+  <?php require dirname(__DIR__) . '/includes/favicon.php'; ?>
   <title>Irish Company Registration From Abroad | Companies Formation</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,6 +37,7 @@ $contactCtaLabel = 'Email us';
   <?php require dirname(__DIR__) . '/includes/header.php'; ?>
   <main id="main">
     <?php require dirname(__DIR__) . '/includes/breadcrumb.php'; ?>
+    <?php require dirname(__DIR__) . '/includes/services-ticker.php'; ?>
 
     <section class="abroad-intro py-16 lg:py-24 border-b border-border-subtle" aria-labelledby="abroad-intro-title">
       <div class="max-w-7xl mx-auto px-6 lg:px-12">

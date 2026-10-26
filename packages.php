@@ -55,6 +55,7 @@ $packages = [
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Compare Basic, Standard, Premium and Non-Resident Irish company formation packages from Companies Formation.">
   <meta name="theme-color" content="#ffffff">
+  <?php require __DIR__ . '/includes/favicon.php'; ?>
   <title>Company Formation Packages | Companies Formation</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -69,6 +70,7 @@ $packages = [
   <?php require __DIR__ . '/includes/header.php'; ?>
   <main id="main">
     <?php require __DIR__ . '/includes/breadcrumb.php'; ?>
+    <?php require __DIR__ . '/includes/services-ticker.php'; ?>
 
     <section class="py-20 lg:py-28 bg-white border-b border-border-subtle" aria-labelledby="packages-title">
       <div class="max-w-7xl mx-auto px-6 lg:px-12">

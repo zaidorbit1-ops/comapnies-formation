@@ -67,9 +67,6 @@
 </nav>
 <!-- Trailing Action Buttons -->
 <div class="site-header__actions flex items-center gap-3">
-<a class="theme-button theme-button-secondary hidden sm:inline-flex items-center justify-center px-4 py-2.5 font-label-md text-label-md" href="https://companiesformation.ie">
-          Client Portal
-        </a>
         <a class="theme-button theme-button-primary inline-flex items-center justify-center px-5 py-2.5 font-label-md text-label-md" href="<?= htmlspecialchars($siteRoot ?? '', ENT_QUOTES, 'UTF-8') ?>index.php#packages">
           Start Formation
         </a>

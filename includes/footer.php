@@ -52,7 +52,7 @@
       <ul>
         <li><a href="<?= htmlspecialchars($siteRoot ?? '', ENT_QUOTES, 'UTF-8') ?>index.php">Home</a></li>
         <li><a href="<?= htmlspecialchars($siteRoot ?? '', ENT_QUOTES, 'UTF-8') ?>about.php">About us</a></li>
-        <li><a href="<?= htmlspecialchars($siteRoot ?? '', ENT_QUOTES, 'UTF-8') ?>services/index.php">All services</a></li>
+        <li><a href="<?= htmlspecialchars($siteRoot ?? '', ENT_QUOTES, 'UTF-8') ?>index.php#services">All services</a></li>
         <li><a href="<?= htmlspecialchars($siteRoot ?? '', ENT_QUOTES, 'UTF-8') ?>packages.php">Packages</a></li>
         <li><a href="<?= htmlspecialchars($siteRoot ?? '', ENT_QUOTES, 'UTF-8') ?>faq.php">Frequently asked questions</a></li>
         <li><a href="<?= htmlspecialchars($siteRoot ?? '', ENT_QUOTES, 'UTF-8') ?>downloads.php">Downloads</a></li>

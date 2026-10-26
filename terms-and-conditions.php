@@ -131,6 +131,7 @@ $termsSections = [
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Terms and conditions for company formation and related services provided by Companies Formation in Ireland.">
   <meta name="theme-color" content="#ffffff">
+  <?php require __DIR__ . '/includes/favicon.php'; ?>
   <title>Terms and Conditions | Companies Formation</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

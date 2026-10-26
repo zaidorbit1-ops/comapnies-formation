@@ -22,6 +22,7 @@ $contactCtaLabel = 'Call us';
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Tax registration support for Irish companies, including Corporation Tax, VAT and PAYE registration.">
   <meta name="theme-color" content="#ffffff">
+  <?php require dirname(__DIR__) . '/includes/favicon.php'; ?>
   <title>Tax/VAT Registration | Companies Formation</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,6 +37,7 @@ $contactCtaLabel = 'Call us';
   <?php require dirname(__DIR__) . '/includes/header.php'; ?>
   <main id="main">
     <?php require dirname(__DIR__) . '/includes/breadcrumb.php'; ?>
+    <?php require dirname(__DIR__) . '/includes/services-ticker.php'; ?>
 
     <section class="tax-registration-intro abroad-intro py-16 lg:py-24 border-b border-border-subtle" aria-labelledby="tax-registration-intro-title">
       <div class="max-w-7xl mx-auto px-6 lg:px-12">
@@ -47,14 +49,14 @@ $contactCtaLabel = 'Call us';
             <p class="text-on-surface-variant font-body-lg text-body-lg">Registering for tax can have implications for your business, so before you register for tax, it is vital you call us. Our experts will let you know which types of tax you have to apply for (depending on your circumstances), and those you do not have to apply for.</p>
             <div class="tax-registration-intro__price abroad-intro__price">
               <span>€100.00 <small>+ VAT</small></span>
-              <a class="theme-button theme-button-primary" href="#tax-registration-enquiry">
+              <a class="theme-button theme-button-primary" href="../../contact.php">
                 Enquire online <span class="material-symbols-outlined" aria-hidden="true">arrow_downward</span>
               </a>
             </div>
           </div>
           <div class="abroad-intro__visual">
             <?php
-            $assetImageName = 'tax-vat-registration-hero.jpg';
+            $assetImageName = 'service10.png';
             $assetImageAlt = 'Tax registration consultation';
             $assetImageWidth = 1200;
             $assetImageHeight = 880;
@@ -112,65 +114,9 @@ $contactCtaLabel = 'Call us';
       </div>
     </section>
 
-    <section class="tax-registration-form-section rbo-form-section py-20 lg:py-28 bg-surface-subtle border-b border-border-subtle" id="tax-registration-enquiry" aria-labelledby="tax-registration-form-title">
-      <div class="max-w-7xl mx-auto px-6 lg:px-12">
-        <div class="rbo-form__intro">
-          <span class="theme-eyebrow">Tax registration consultation</span>
-          <span class="services-section__accent" aria-hidden="true"></span>
-          <h2 class="text-surface-contrast font-headline-lg text-headline-lg font-bold tracking-tight" id="tax-registration-form-title">Request a consultation</h2>
-          <p class="text-on-surface-variant font-body-lg text-body-lg">Tell us how to contact you and our experts will call you back to assess your company’s tax needs.</p>
-        </div>
-        <div class="rbo-form__notice" role="note">
-          <span class="material-symbols-outlined" aria-hidden="true">info</span>
-          <p>This enquiry form is for preview only and does not send or store information. Please call or email us to arrange your consultation until secure form submission is configured.</p>
-        </div>
-
-        <form class="rbo-form tax-registration-form" id="tax-registration-form" method="post" autocomplete="off" novalidate>
-          <fieldset class="rbo-form__group">
-            <legend><span class="material-symbols-outlined" aria-hidden="true">person</span>Your details</legend>
-            <div class="rbo-form__fields rbo-form__fields--two">
-              <div class="rbo-form__field">
-                <label for="tax-registration-name">Your Name</label>
-                <input id="tax-registration-name" type="text" autocomplete="name">
-              </div>
-              <div class="rbo-form__field">
-                <label for="tax-registration-email">Your Email</label>
-                <input id="tax-registration-email" type="email" autocomplete="email">
-              </div>
-              <div class="rbo-form__field">
-                <label for="tax-registration-phone">Phone Number</label>
-                <input id="tax-registration-phone" type="tel" autocomplete="tel">
-              </div>
-              <div class="rbo-form__field">
-                <label for="tax-registration-company">Company Name</label>
-                <input id="tax-registration-company" type="text" autocomplete="organization">
-              </div>
-            </div>
-          </fieldset>
-          <fieldset class="rbo-form__group">
-            <legend><span class="material-symbols-outlined" aria-hidden="true">checklist</span>Tax registrations to discuss</legend>
-            <div class="rbo-form__choices tax-registration-form__choices">
-              <label><input type="checkbox"> <span>Corporation Tax</span></label>
-              <label><input type="checkbox"> <span>Domestic Irish VAT</span></label>
-              <label><input type="checkbox"> <span>Intra-EU / VIES</span></label>
-              <label><input type="checkbox"> <span>PAYE</span></label>
-            </div>
-          </fieldset>
-          <div class="rbo-form__submit">
-            <button class="theme-button theme-button-primary" type="submit" disabled>
-              Request consultation <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
-            </button>
-            <p>Secure submission is not configured yet. Please call or email us to arrange a consultation.</p>
-          </div>
-        </form>
-        <p class="rbo-form__questions">Call us on <a href="tel:+35345254212">+353 (045)254212</a> or email <a href="mailto:info@companiesformation.ie">info@companiesformation.ie</a>.</p>
-      </div>
-    </section>
-
     <?php require dirname(__DIR__) . '/includes/cta.php'; ?>
   </main>
   <?php require dirname(__DIR__) . '/includes/footer.php'; ?>
   <script src="../../assets/js/site.js?v=<?= filemtime(dirname(__DIR__) . '/assets/js/site.js') ?>" defer></script>
-  <script src="../../assets/js/tax-registration-enquiry.js?v=<?= filemtime(dirname(__DIR__) . '/assets/js/tax-registration-enquiry.js') ?>" defer></script>
 </body>
 </html>

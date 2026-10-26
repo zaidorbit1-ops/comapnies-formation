@@ -22,6 +22,7 @@ $contactCtaLabel = 'Call us today';
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Support with taking a company that has ceased trading off the Register of Companies.">
   <meta name="theme-color" content="#ffffff">
+  <?php require dirname(__DIR__) . '/includes/favicon.php'; ?>
   <title>Closing Up A Company | Companies Formation</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,6 +37,7 @@ $contactCtaLabel = 'Call us today';
   <?php require dirname(__DIR__) . '/includes/header.php'; ?>
   <main id="main">
     <?php require dirname(__DIR__) . '/includes/breadcrumb.php'; ?>
+    <?php require dirname(__DIR__) . '/includes/services-ticker.php'; ?>
 
     <section class="closing-company-intro abroad-intro py-16 lg:py-24 border-b border-border-subtle" aria-labelledby="closing-company-intro-title">
       <div class="max-w-7xl mx-auto px-6 lg:px-12">
@@ -54,7 +56,7 @@ $contactCtaLabel = 'Call us today';
           </div>
           <div class="abroad-intro__visual">
             <?php
-            $assetImageName = 'closing-up-company-hero.jpg';
+            $assetImageName = 'service6.png';
             $assetImageAlt = 'Closing up a company';
             $assetImageWidth = 1200;
             $assetImageHeight = 880;

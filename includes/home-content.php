@@ -1,5 +1,6 @@
 <main id="main">
 <?php require __DIR__ . '/slider.php'; ?>
+<?php require __DIR__ . '/services-ticker.php'; ?>
 <!-- WELCOME SECTION -->
 <section class="py-20 lg:py-24 bg-surface-subtle border-b border-border-subtle">
 <div class="max-w-7xl mx-auto px-6 lg:px-12">

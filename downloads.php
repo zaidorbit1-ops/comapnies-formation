@@ -43,6 +43,7 @@ $downloadForms = [
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Download PPS number, Agent Link Notification and Irish company incorporation forms from Companies Formation.">
   <meta name="theme-color" content="#ffffff">
+  <?php require __DIR__ . '/includes/favicon.php'; ?>
   <title>Downloads | Companies Formation</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -57,6 +58,7 @@ $downloadForms = [
   <?php require __DIR__ . '/includes/header.php'; ?>
   <main id="main">
     <?php require __DIR__ . '/includes/breadcrumb.php'; ?>
+    <?php require __DIR__ . '/includes/services-ticker.php'; ?>
 
     <section class="downloads-page py-20 lg:py-28 border-b border-border-subtle" aria-labelledby="downloads-title">
       <div class="max-w-7xl mx-auto px-6 lg:px-12">

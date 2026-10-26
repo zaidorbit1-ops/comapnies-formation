@@ -18,6 +18,7 @@ $breadcrumbs = [
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Professional Irish company formation support from Companies Formation in Maynooth, Co. Kildare. Complete formation pack from €135 plus VAT.">
   <meta name="theme-color" content="#ffffff">
+  <?php require dirname(__DIR__) . '/includes/favicon.php'; ?>
   <title>Irish Company Formation | Companies Formation</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,6 +33,7 @@ $breadcrumbs = [
   <?php require dirname(__DIR__) . '/includes/header.php'; ?>
   <main id="main">
     <?php require dirname(__DIR__) . '/includes/breadcrumb.php'; ?>
+    <?php require dirname(__DIR__) . '/includes/services-ticker.php'; ?>
 
     <section class="formation-intro py-16 lg:py-24 bg-surface-subtle border-b border-border-subtle" aria-labelledby="formation-intro-title">
       <div class="max-w-7xl mx-auto px-6 lg:px-12">

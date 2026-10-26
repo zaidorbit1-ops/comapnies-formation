@@ -1,0 +1,1 @@
+<link rel="icon" type="image/svg+xml" href="<?= htmlspecialchars($siteRoot ?? '', ENT_QUOTES, 'UTF-8') ?>assets/favicon/favicon.svg?v=<?= filemtime(dirname(__DIR__) . '/assets/favicon/favicon.svg') ?>">

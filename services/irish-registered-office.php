@@ -28,6 +28,7 @@ $registeredOfficeBenefits = [
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Use Companies Formation’s Maynooth office address as your Irish company’s registered office, including statutory mail forwarding.">
   <meta name="theme-color" content="#ffffff">
+  <?php require dirname(__DIR__) . '/includes/favicon.php'; ?>
   <title>Irish Registered Office | Companies Formation</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,6 +43,7 @@ $registeredOfficeBenefits = [
   <?php require dirname(__DIR__) . '/includes/header.php'; ?>
   <main id="main">
     <?php require dirname(__DIR__) . '/includes/breadcrumb.php'; ?>
+    <?php require dirname(__DIR__) . '/includes/services-ticker.php'; ?>
 
     <section class="registered-office-intro abroad-intro py-16 lg:py-24 border-b border-border-subtle" aria-labelledby="registered-office-intro-title">
       <div class="max-w-7xl mx-auto px-6 lg:px-12">
@@ -60,7 +62,7 @@ $registeredOfficeBenefits = [
           </div>
           <div class="abroad-intro__visual">
             <?php
-            $assetImageName = 'irish-registered-office-hero.jpg';
+            $assetImageName = 'service12.png';
             $assetImageAlt = 'Irish registered office service';
             $assetImageWidth = 1200;
             $assetImageHeight = 880;

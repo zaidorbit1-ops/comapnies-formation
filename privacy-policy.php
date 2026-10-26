@@ -21,7 +21,8 @@ $privacySections = [
     'title' => 'Personal Information We May Handle',
     'paragraphs' => [
       'Depending on how you contact us and which service you request, personal information may include your name, email address, telephone number, postal address, enquiry details, and information about a company or proposed company.',
-      'If you instruct us to provide a service that requires it, information may also include director, shareholder or beneficial-owner details, identification and address-verification documents, company records, payment information, and correspondence relating to your instruction. Please do not send identity documents or other sensitive information by ordinary email unless we have explained a suitable secure method.',
+      'If you submit the Beneficial Ownership Register form, the information includes the submitting person’s contact details, company name, shareholder names, PPS numbers, residential addresses, ownership details, and any other-control information you provide. The form creates a PDF and sends it to our notification inboxes. The PDF is not password-protected, so use the contact details on this website if you do not accept email delivery of this information.',
+      'If you instruct us to provide another service that requires it, information may also include director, shareholder or beneficial-owner details, identification and address-verification documents, company records, payment information, and correspondence relating to your instruction. Please do not send identity documents or other sensitive information by ordinary email unless we have explained a suitable secure method.',
       'When you use the website, our hosting provider may process technical information needed to deliver and protect the site, such as IP address, browser and device details, requested pages, and server event logs.',
     ],
   ],
@@ -30,7 +31,7 @@ $privacySections = [
     'paragraphs' => [
       'We may receive information directly from you when you call, email, write to us, or give instructions for a service. We may also receive information from an authorised professional adviser or another person acting on your behalf, where appropriate.',
       'Some information may be obtained from public company records or relevant authorities when this is necessary to carry out an instructed service or meet a legal obligation.',
-      'The enquiry forms currently displayed on this website are marked as preview-only and do not submit or store the information entered. Please contact us by telephone or email instead. This notice should be updated if online form submission is enabled.',
+      'When configured, the Contact and Annual Return forms send the submitted fields to our notification inboxes by email. The Beneficial Ownership Register form creates a PDF of the submitted details and emails it as an attachment. The website does not save form submissions to a database or retain the generated PDF. Mailbox and SMTP providers may process or retain message data according to their services and retention settings.',
     ],
   ],
   [
@@ -44,7 +45,8 @@ $privacySections = [
   [
     'title' => 'Who May Receive Information',
     'paragraphs' => [
-      'We may share relevant information with service providers who support our business, such as website hosting, communications, payment, IT, or secure document-handling providers, under appropriate confidentiality and data-protection arrangements.',
+      'Website form submissions are intended for info@companiesformation.ie and zaidorbit1@gmail.com. Hostinger SMTP is used to transmit the notifications once its account has been configured. Email providers may process and retain the messages and attachments in recipient mailboxes.',
+      'We may also share relevant information with service providers who support our business, such as website hosting, communications, payment, IT, or secure document-handling providers, under appropriate confidentiality and data-protection arrangements.',
       'Where required for a service or by law, relevant information may be shared with the Companies Registration Office, Revenue Commissioners, the Register of Beneficial Ownership, financial institutions, professional advisers, or other competent authorities. We share only information that is relevant to the purpose, subject to applicable law.',
       'We do not sell personal information. We do not disclose it to unrelated parties for their own direct marketing.',
     ],
@@ -65,7 +67,7 @@ $privacySections = [
   [
     'title' => 'Security',
     'paragraphs' => [
-      'We use reasonable technical and organisational measures intended to protect personal information against unauthorised access, loss, alteration, or disclosure. No method of transmitting or storing information can be guaranteed to be completely secure.',
+      'We use reasonable technical and organisational measures intended to protect personal information against unauthorised access, loss, alteration, or disclosure. Configured form emails use SMTP transport encryption, but the RBO PDF attachment itself is not encrypted and may remain accessible in recipient email accounts. No method of transmitting or storing information can be guaranteed to be completely secure.',
       'If a personal data breach occurs, we will assess and respond to it in accordance with applicable legal requirements, including making any required notifications.',
     ],
   ],
@@ -105,6 +107,7 @@ $privacySections = [
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Read how Companies Formation handles personal information in connection with its website and company formation services in Ireland.">
   <meta name="theme-color" content="#ffffff">
+  <?php require __DIR__ . '/includes/favicon.php'; ?>
   <title>Privacy Policy | Companies Formation</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

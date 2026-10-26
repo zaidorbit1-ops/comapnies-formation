@@ -86,6 +86,7 @@ $faqGroups = [
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Answers to common questions about Irish company formation, directors, VAT, company records and annual filing requirements.">
   <meta name="theme-color" content="#ffffff">
+  <?php require __DIR__ . '/includes/favicon.php'; ?>
   <title>Frequently Asked Questions | Companies Formation</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -100,6 +101,7 @@ $faqGroups = [
   <?php require __DIR__ . '/includes/header.php'; ?>
   <main id="main">
     <?php require __DIR__ . '/includes/breadcrumb.php'; ?>
+    <?php require __DIR__ . '/includes/services-ticker.php'; ?>
 
     <section class="faq-page py-20 lg:py-28 border-b border-border-subtle" aria-labelledby="faq-page-title">
       <div class="max-w-7xl mx-auto px-6 lg:px-12">
